@@ -1,0 +1,16 @@
+10. Кiev str. Betkhovena, 12/1, 9, 45.0, Stanton Muller, Stanton@.com 380595828
+11. Кiev str. Betkhovena, 12/1, 10, 45.0, Jon Goyette, Jon@.com 380595728
+56. Кiev str. Betkhovena, 12/2, 19, 50.0, Johnnie Lesch, Johnnie@.com 380966923
+61. Кiev str. Betkhovena, 12/2, 24, 40.0, Vivian Zboncak, Vivian@.com 380966923
+62. Кiev str. Betkhovena, 12/2, 25, 40.0, Ricky Haley, Ricky@.com 380966923
+63. Кiev str. Betkhovena, 12/2, 26, 40.0, Gonzalo Schoen, Gonzalo@.com 380966945
+64. Кiev str. Betkhovena, 12/2, 27, 40.0, Olga Upton, Olga@.com 380966945
+79. Кiev str. Betkhovena, 12/3, 8, 30.0, Carlotta Baumbach, Carlotta@.com 380966939
+80. Кiev str. Betkhovena, 12/3, 9, 30.0, Lucio Dach, Lucio@.com 380966939
+81. Кiev str. Betkhovena, 12/3, 10, 40.0, Damian Hamill, Damian@.com 380966999
+82. Кiev str. Betkhovena, 12/3, 11, 40.0, Ford Friesen, Ford@.com 380966999
+83. Кiev str. Betkhovena, 12/3, 12, 40.0, Brooks Muller, Brooks@.com 380966999
+84. Кiev str. Betkhovena, 12/3, 13, 40.0, Joannie Ankunding, Joannie@.com 380966999
+85. Кiev str. Betkhovena, 12/3, 14, 40.0, Luther Dickinson, Luther@.com 380966999
+86. Кiev str. Betkhovena, 12/3, 15, 40.0, Shane Kuvalis, Shane@.com 380966999
+87. Кiev str. Betkhovena, 12/3, 16, 40.0, Mercedes Kuhic, Mercedes@.com 380966987
