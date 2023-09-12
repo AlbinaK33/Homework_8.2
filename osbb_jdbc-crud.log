@@ -1,3 +1,1 @@
-2023-09-11 18:30:12 INFO  OsbbCrud:53 - Crud has initialized
-2023-09-11 18:30:12 DEBUG OsbbCrud:60 - Flyway migration execute
-2023-09-11 18:30:16 TRACE OsbbCrud:80 - Call getting members by query
+2023-09-12 23:01:24 TRACE OsbbCrud:53 - Call getting members by query

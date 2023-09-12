@@ -1,9 +1,7 @@
 package org.example.data;
 
 import org.apache.log4j.Logger;
-import org.flywaydb.core.Flyway;
 
-import java.io.Closeable;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -12,13 +10,11 @@ import java.sql.*;
 import java.util.LinkedList;
 import java.util.List;
 
-import static org.example.data.Config.*;
+import static org.example.data.OsbbConnection.*;
 
-public class OsbbCrud implements Closeable {
+public class OsbbCrud {
 
     private static final Logger logger = Logger.getLogger(OsbbCrud.class);
-    private Connection connection = null;
-
     private static final String SQL_QUERY = "SELECT osbb_example.resident.id, osbb_example.building.adress_building, osbb_example.flat.number_flat, osbb_example.flat.square, \n" +
             "osbb_example.resident.resident_data, osbb_example.resident.contact_data\n" +
             "FROM osbb_example.resident \n" +
@@ -33,8 +29,9 @@ public class OsbbCrud implements Closeable {
     private static final File file = new File("osbb.txt");
 
     public void getResultConnection() {
-        try (OsbbCrud osbbCrud = new OsbbCrud().jdbcConnection();
-             FileWriter writer = new FileWriter(file)) {
+        try ( OsbbConnection osbbConnection = new OsbbConnection().jdbcConnection();
+              FileWriter writer = new FileWriter(file)) {
+            OsbbCrud osbbCrud = new OsbbCrud();
 
             for (OsbbMembers osbbMembers : osbbCrud.getMembersQuery("1", "0", 1)) {
                 String line = osbbMembers.toString();
@@ -46,33 +43,6 @@ public class OsbbCrud implements Closeable {
             }
         } catch (SQLException | IOException e) {
             logger.fatal(e);
-        }
-    }
-
-    private OsbbCrud jdbcConnection() throws SQLException {
-            logger.info("Crud has initialized");
-            flywayMigration();
-            connection = DriverManager.getConnection(jdbcUrl, username, password);
-        return this;
-    }
-
-    private void flywayMigration() {
-        logger.debug("Flyway migration execute");
-
-        Flyway.configure()
-                .dataSource(jdbcUrl, username, password)
-                .locations("classpath:flyway/script")
-                .load()
-                .migrate();
-    }
-
-    @Override
-    public void close(){
-        try {
-            connection.close();
-            connection = null;
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
         }
     }
 
