@@ -33,8 +33,8 @@ public class OsbbCrud {
               FileWriter writer = new FileWriter(file)) {
             OsbbCrud osbbCrud = new OsbbCrud();
 
-            for (OsbbMembers osbbMembers : osbbCrud.getMembersQuery("1", "0", 1)) {
-                String line = osbbMembers.toString();
+            for (OsbbMember osbbMember : osbbCrud.getMembersQuery("1", "0", 1)) {
+                String line = osbbMember.toString();
                 if (line != null) {
                     writer.write(line);
                     writer.flush();
@@ -46,10 +46,10 @@ public class OsbbCrud {
         }
     }
 
-    private List<OsbbMembers> getMembersQuery(String residence, String autopark, int ownership) {
+    private List<OsbbMember> getMembersQuery(String residence, String autopark, int ownership) {
         logger.trace("Call getting members by query");
 
-        final List<OsbbMembers> result = new LinkedList<>();
+        final List<OsbbMember> result = new LinkedList<>();
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(SQL_QUERY)) {
             preparedStatement.setString(1, residence);
@@ -59,7 +59,7 @@ public class OsbbCrud {
 
             while (resultSet.next()) {
                 result.add(
-                        new OsbbMembers()
+                        new OsbbMember()
                                 .setId(resultSet.getInt("id"))
                                 .setAdress(resultSet.getString("adress_building"))
                                 .setNumberFlat(resultSet.getShort("number_flat"))

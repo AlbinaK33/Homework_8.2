@@ -1,6 +1,6 @@
 package org.example.data;
 
-public class OsbbMembers {
+public class OsbbMember {
 
     private int id;
     private String adress;
@@ -13,7 +13,7 @@ public class OsbbMembers {
         return id;
     }
 
-    OsbbMembers setId(int id) {
+    OsbbMember setId(int id) {
         this.id = id;
         return this;
     }
@@ -22,7 +22,7 @@ public class OsbbMembers {
         return adress;
     }
 
-    OsbbMembers setAdress(String adress) {
+    OsbbMember setAdress(String adress) {
         this.adress = adress;
         return this;
     }
@@ -31,7 +31,7 @@ public class OsbbMembers {
         return numberFlat;
     }
 
-    OsbbMembers setNumberFlat(short numberFlat) {
+    OsbbMember setNumberFlat(short numberFlat) {
         this.numberFlat = numberFlat;
         return this;
     }
@@ -40,7 +40,7 @@ public class OsbbMembers {
         return square;
     }
 
-    OsbbMembers setSquare(float square) {
+    OsbbMember setSquare(float square) {
         this.square = square;
         return this;
     }
@@ -49,7 +49,7 @@ public class OsbbMembers {
         return name;
     }
 
-    OsbbMembers setName(String name) {
+    OsbbMember setName(String name) {
         this.name = name;
         return this;
     }
@@ -58,7 +58,7 @@ public class OsbbMembers {
         return contact;
     }
 
-    OsbbMembers setContact(String contact) {
+    OsbbMember setContact(String contact) {
         this.contact = contact;
         return this;
     }
